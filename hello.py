@@ -26,7 +26,6 @@ print("Bio: ", bio)
 print("Followers: ", followers)
 print("Category: ", category)
 
+
 if age>40 and category == "fun":
     print("Fun has no boundaries, so enjoy no matter if you're " + str(age) + " or beyond!")
-
-
