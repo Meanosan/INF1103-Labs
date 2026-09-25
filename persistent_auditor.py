@@ -1,8 +1,12 @@
 def load_inventory():
-     with open("inventory.txt", "r") as file:
-          inventory = file.readlines()
-          print(inventory)
-     return inventory
+     try:
+          with open("inventory.txt", "r") as file:
+               inventory = file.readlines()
+               print(inventory)
+               return inventory
+     except FileNotFoundError:
+          inventory = open("inventory.txt", "x")
+          return inventory
 
 def process_delivery(current_total,new_value):
           current_total = current_total + new_value
