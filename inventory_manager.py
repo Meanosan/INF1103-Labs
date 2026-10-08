@@ -1,9 +1,5 @@
-inventory = [{
-    "UID": str,
-    "Name": str,
-    "Price": float,
-    "Stock": int
-}]
+__MAINLINE__ = "=" * 20
+__SUBLINE__ = "-" * 6
 
 def load_inventory():
     try:
@@ -16,7 +12,15 @@ def load_inventory():
         return inventory
 
 def add_product():
-    return
+    newProduct = [{}]
+    while True:
+        newProduct[{"ID"}] = input("Add New Product\nProduct ID: ")
+        newProduct[{"Name"}] = input("Product Name: ")
+        newProduct[{"Price"}] = float(input("Price: $"))
+        newProduct[{"Stock"}] = int(input("Stock Quantity: "))
+        break
+    with open("inventory.json", "w") as file:
+        return
 
 def update_stock():
     return
@@ -28,15 +32,15 @@ def display_all():
     return
 
 def save_inventory():
-    return
+    with open("inventory.json", "w") as file:
+            file.writelines()
+            print("Transaction succesfully saved to inventory.json.")
 
 def menu():
-    __MAINLINE__ = "=" * 12
-    __SUBLINE__ = "-" * 4
-    print(__MAINLINE__+"\nINVENTORY MANAGEMENT SYSTEM\n"+__MAINLINE__+"\n\n")
+    print(__MAINLINE__+"\nINVENTORY MANAGEMENT SYSTEM\n"+__MAINLINE__+"\n")
     load_inventory()
     while True:
-        choice = input(__SUBLINE__+"MENU"+__SUBLINE__+"\n1. Display All Products\n2. Add Product\n3. Update Stock\n4. Search Product\n5. Save Inventory\n6. Exit"+__SUBLINE__*2+"\n\nEnter Option:")
+        choice = input("\n"+__SUBLINE__+"MENU"+__SUBLINE__+"\n1. Display All Products\n2. Add Product\n3. Update Stock\n4. Search Product\n5. Save Inventory\n6. Exit\n"+__SUBLINE__*3+"\n\nEnter Option:")
         if choice == "1":
             display_all()
         elif choice == "2":
@@ -50,3 +54,5 @@ def menu():
         else:
             print("Exiting... Thank you.")
             break
+
+menu()
