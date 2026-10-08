@@ -5,6 +5,9 @@ inventory = [{
     "Stock": int
 }]
 
+def load_inventory():
+    return
+
 def add_product():
     return
 
@@ -17,8 +20,6 @@ def search_product():
 def display_all():
     return
 
-def load_inventory():
-    return
 
 def menu():
     return
